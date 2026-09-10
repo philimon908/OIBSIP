@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="avatar-placeholder">
+                <img src="profile.jpg.jpeg" alt="Profile Photo" id="profile-img">
+            </div>
+            <h1>Hello, I'm <span class="highlight">Gyamerah Philimon</span></h1>
+            <p class="tagline">Computer Engineering Student - Web Developer</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p class="about-text">
+            I am a level 200 student specializing in computer engineering with a passion for building interactive web applications, digital logic designs, and hardware simulations. I enjoy turning complex engineering problems into clean, accessible code.
+        </p>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5 / CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">C / C++</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Circuit Simulation (Proteus)</div>
+            <div class="skill-card">SQL / Databases</div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>4-Bit Binary Adder & BCD Display</h3>
+                <p>Designed and simulated a 4-bit binary adder with a 5-bit BCD conversion logic circuit in Proteus.</p>
+                <a href="https://www.linkedin.com/posts/philimon-gyamerah-a70b60377_hardwaredesign-computerengineering-proteus-activity-7479009204658192384-uXo0?utm_source=share&utm_medium=member_ios&rcm=ACoAAF1A3_QB-TS4aA_JPmh4rscpgQPpBzT-pP0" target="_blank" class="btn-link">View Project on LinkedIn &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Industrial control circuit</h3>
+                <p>Designed and implemented an industrial control circuit using digital logic gates and microcontrollers.</p>
+                <a href="https://www.linkedin.com/posts/philimon-gyamerah-a70b60377_hardwaredesign-computerengineering-proteus-activity-7479009204658192384-uXo0?utm_source=share&utm_medium=member_ios&rcm=ACoAAF1A3_QB-TS4aA_JPmh4rscpgQPpBzT-pP0" target="_blank" class="btn-link">View Project on LinkedIn &rarr;</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-alt">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> philimon908@gmail.com</p>
+            <p><strong>Phone:</strong> +233 535272432</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/philimon-gyamerah-a70b60377" target="_blank">linkedin.com/in/philimon-gyamerah-a70b60377</a></p>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message submitted!');">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Gyamerah Philimon. Built for Oasis Infobyte SIP.</p>
+    </footer>
+
+</body>
+</html>
