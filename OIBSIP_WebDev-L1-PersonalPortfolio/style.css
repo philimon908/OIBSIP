@@ -205,6 +205,10 @@ h2 {
     border-radius: 6px;
     font-size: 1rem;
 }
+.form-results {
+    margin-top: 10px;
+    font-weight: bold;
+}
 
 .btn-submit {
     background-color: #0284c7;
