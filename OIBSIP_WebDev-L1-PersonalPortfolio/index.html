@@ -99,6 +99,46 @@
     <footer class="footer">
         <p>&copy; 2026 Gyamerah Philimon. Built for Oasis Infobyte SIP.</p>
     </footer>
+    
+    <script>
+  const form = document.getElementById('contact-form');
+  const result = document.getElementById('form-result');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.style.color = "#333";
+    result.textContent = "Sending...";
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      let res = await response.json();
+      if (response.status === 200) {
+        result.style.color = "green";
+        result.textContent = "Message sent successfully!";
+        form.reset();
+      } 
+      else {
+        result.style.color = "red";
+        result.textContent = res.message || "Submission failed. Try again.";
+      }
+    })
+    .catch(error => {
+      result.style.color = "red";
+      result.textContent = "Something went wrong. Please check your connection.";
+    });
+  });
+</script>
 
 </body>
 </html>
